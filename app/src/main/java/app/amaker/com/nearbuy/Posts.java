@@ -14,7 +14,8 @@ public final class Posts {
         public static final String COLUMN_NAME_USER_ID = "post id";
         public static final String COLUMN_NAME_FIRST_NAME = "first name";
         public static final String COLUMN_NAME_LAST_NAME = "last name";
-        public static final String COLUMN_NAME_DESCRIPTION = "link";
+        public static final String COLUMN_NAME_ITEM_NAME = "item name";
+        public static final String COLUMN_NAME_DESCRIPTION = "description";
         public static final String COlUMN_NAME_IMAGE = "image";
         public static final String COLUMN_NAME_PRICE = "price";
         public static final String COLUMN_NAME_CREATED_AT = "created at";
@@ -31,6 +32,7 @@ public final class Posts {
                         PostEntry.COLUMN_NAME_USER_ID + TEXT_TYPE + COMMA_SEP +
                         PostEntry.COLUMN_NAME_FIRST_NAME + TEXT_TYPE + COMMA_SEP +
                         PostEntry.COLUMN_NAME_LAST_NAME + TEXT_TYPE + COMMA_SEP +
+                        PostEntry.COLUMN_NAME_ITEM_NAME + TEXT_TYPE + COMMA_SEP +
                         PostEntry.COLUMN_NAME_DESCRIPTION + TEXT_TYPE + COMMA_SEP +
                         PostEntry.COlUMN_NAME_IMAGE + BLOB_TYPE + COMMA_SEP +
                         PostEntry.COLUMN_NAME_PRICE + REAL_TYPE + COMMA_SEP +
