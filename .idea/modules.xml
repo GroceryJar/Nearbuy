@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Nearbuy.iml" filepath="$PROJECT_DIR$/Nearbuy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../facebook-android-sdk-4.7.0/facebook/facebook.iml" filepath="$PROJECT_DIR$/../facebook-android-sdk-4.7.0/facebook/facebook.iml" />
     </modules>
   </component>
 </project>
