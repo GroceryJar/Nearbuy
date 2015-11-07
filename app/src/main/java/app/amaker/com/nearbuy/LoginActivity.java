@@ -20,7 +20,7 @@ import com.facebook.login.widget.LoginButton;
 
 import android.database.sqlite.SQLiteDatabase;
 
-import java.util.Arrays;
+import java.util.Collections;
 
 public class LoginActivity extends ActionBarActivity {
     CallbackManager callbackManager;
@@ -61,8 +61,7 @@ public class LoginActivity extends ActionBarActivity {
                         .show();
             }
         });
-        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile"));
-        Profile p = Profile.getCurrentProfile();
+        LoginManager.getInstance().logInWithReadPermissions(this, Collections.singletonList("public_profile"));
     }
 
     @Override
@@ -98,7 +97,7 @@ public class LoginActivity extends ActionBarActivity {
         Profile profile = Profile.getCurrentProfile();
 
         if(enableAccess && profile != null) {
-            Users.UserEntry.UsersDbHelper mDbHelper = new Users(getApplicationContext());
+            Users.UsersDbHelper mDbHelper = new Users().new UsersDbHelper(getApplicationContext());
             // Gets the data repository in write mode
             SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
@@ -107,7 +106,7 @@ public class LoginActivity extends ActionBarActivity {
             values.put(Users.UserEntry.COLUMN_NAME_USER_ID, profile.getId());
             values.put(Users.UserEntry.COLUMN_NAME_FIRST_NAME, profile.getFirstName());
             values.put(Users.UserEntry.COLUMN_NAME_LAST_NAME, profile.getLastName());
-            values.put(Users.UserEntry.COLUMN_NAME_LINKURI, profile.getLinkUri());
+            values.put(Users.UserEntry.COLUMN_NAME_LINKURI, profile.getLinkUri().toString());
 
             // Insert the new row, returning the primary key value of the new row
             long newRowId;

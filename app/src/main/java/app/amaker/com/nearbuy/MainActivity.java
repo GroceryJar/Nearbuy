@@ -1,5 +1,6 @@
 package app.amaker.com.nearbuy;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,7 +11,9 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
+        Intent login = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(login);
     }
 
     @Override
