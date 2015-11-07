@@ -7,4 +7,8 @@
     <string name="title_activity_post">PostActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="facebook_app_id">ga0RGNYHvNM5d0SLGQfpQWAPGJ8=</string>
+
+    <string name="cancelled">Alert!</string>
+    <string name="login_failed">Login failed!</string>
+    <string name="ok">OK</string>
 </resources>
