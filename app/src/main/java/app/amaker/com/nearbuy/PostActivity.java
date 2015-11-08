@@ -32,7 +32,7 @@ public class PostActivity extends ActionBarActivity {
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                addPost();
 
             }
         });
