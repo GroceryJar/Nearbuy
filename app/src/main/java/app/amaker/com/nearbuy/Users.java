@@ -10,10 +10,10 @@ public final class Users {
 
     /* Inner class that defines the table contents */
     public static abstract class UserEntry implements BaseColumns {
-        public static final String TABLE_NAME = "entry";
-        public static final String COLUMN_NAME_USER_ID = "user id";
-        public static final String COLUMN_NAME_FIRST_NAME = "first name";
-        public static final String COLUMN_NAME_LAST_NAME = "last name";
+        public static final String TABLE_NAME = "users";
+        public static final String COLUMN_NAME_USER_ID = "user_id";
+        public static final String COLUMN_NAME_FIRST_NAME = "first_name";
+        public static final String COLUMN_NAME_LAST_NAME = "last_name";
         public static final String COLUMN_NAME_LINKURI = "link";
 
         public static final String TEXT_TYPE = " TEXT";
@@ -30,7 +30,7 @@ public final class Users {
 
     }
     public class UsersDbHelper extends SQLiteOpenHelper {
-        public static final int DATABASE_VERSION = 1;
+        public static final int DATABASE_VERSION = 2;
         public static final String DATABASE_NAME = "users.db";
 
         public UsersDbHelper(Context context) {

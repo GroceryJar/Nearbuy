@@ -41,7 +41,7 @@ public class LoginActivity extends ActionBarActivity {
             public void onSuccess(LoginResult loginResult) {
                 updateDatabase();
                 // jump to another activity
-                Intent showPosts = new Intent(LoginActivity.this, ShowActivity.class);
+                Intent showPosts = new Intent(LoginActivity.this, PostActivity.class);
                 startActivity(showPosts);
             }
 
@@ -63,6 +63,7 @@ public class LoginActivity extends ActionBarActivity {
                         .show();
             }
         });
+
         LoginManager.getInstance().logInWithReadPermissions(this, Collections.singletonList("public_profile"));
     }
 
