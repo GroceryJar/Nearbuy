@@ -41,6 +41,8 @@ public class LoginActivity extends ActionBarActivity {
             public void onSuccess(LoginResult loginResult) {
                 updateDatabase();
                 // jump to another activity
+                Intent showPosts = new Intent(LoginActivity.this, ShowActivity.class);
+                startActivity(showPosts);
             }
 
             @Override
@@ -109,8 +111,7 @@ public class LoginActivity extends ActionBarActivity {
             values.put(Users.UserEntry.COLUMN_NAME_LINKURI, profile.getLinkUri().toString());
 
             // Insert the new row, returning the primary key value of the new row
-            long newRowId;
-            newRowId = db.insert(Users.UserEntry.TABLE_NAME, null, values);
+            long newRowId = db.insert(Users.UserEntry.TABLE_NAME, null, values);
         }
     }
 }
