@@ -24,7 +24,7 @@ public final class Users {
                         UserEntry.COLUMN_NAME_USER_ID + TEXT_TYPE + COMMA_SEP +
                         UserEntry.COLUMN_NAME_FIRST_NAME + TEXT_TYPE + COMMA_SEP +
                         UserEntry.COLUMN_NAME_LAST_NAME + TEXT_TYPE + COMMA_SEP +
-                        UserEntry.COLUMN_NAME_LINKURI + TEXT_TYPE + COMMA_SEP + " )";
+                        UserEntry.COLUMN_NAME_LINKURI + TEXT_TYPE + " )";
 
         public static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + UserEntry.TABLE_NAME;
 

@@ -37,7 +37,7 @@ public final class Posts {
                         PostEntry.COlUMN_NAME_IMAGE + BLOB_TYPE + COMMA_SEP +
                         PostEntry.COLUMN_NAME_PRICE + REAL_TYPE + COMMA_SEP +
                         PostEntry.COLUMN_NAME_CREATED_AT + INTEGER_TYPE + COMMA_SEP +
-                        PostEntry.COLUMN_NAME_UPDATED_AT + INTEGER_TYPE + COMMA_SEP + " )";
+                        PostEntry.COLUMN_NAME_UPDATED_AT + INTEGER_TYPE + " )";
 
         public static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + PostEntry.TABLE_NAME;
 

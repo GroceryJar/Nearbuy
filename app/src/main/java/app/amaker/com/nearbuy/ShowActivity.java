@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class ShowActivity extends ActionBarActivity {
@@ -59,13 +60,23 @@ public class ShowActivity extends ActionBarActivity {
                 sortOrder
         );
 
-        c.moveToFirst();
-        while(c.moveToNext()) {
-            long itemId = c.getLong(
-                    c.getColumnIndexOrThrow(Posts.PostEntry._ID)
-            );
-        }
+        LinearLayout posts = (LinearLayout) findViewById(R.id.searchResults);
 
+        c.moveToFirst();
+        int counter = 0;
+        while(c.moveToNext()) {
+            posts.addView(findViewById(R.id.singlePost));
+            LinearLayout singlePost = (LinearLayout) posts.getChildAt(counter);
+            TextView item = (TextView) singlePost.getChildAt(0);
+            TextView name = (TextView) singlePost.getChildAt(1);
+            TextView date = (TextView) singlePost.getChildAt(2);
+            item.setText(c.getString(c.getColumnIndexOrThrow(Posts.PostEntry.COLUMN_NAME_ITEM_NAME)));
+            String fullName = c.getString(c.getColumnIndexOrThrow(Posts.PostEntry.COLUMN_NAME_FIRST_NAME)) + " "
+            + c.getString(c.getColumnIndexOrThrow(Posts.PostEntry.COLUMN_NAME_LAST_NAME));
+            name.setText(fullName);
+            date.setText(c.getColumnIndexOrThrow(Posts.PostEntry.COLUMN_NAME_CREATED_AT));
+            counter++;
+        }
         c.close();
 
     }
