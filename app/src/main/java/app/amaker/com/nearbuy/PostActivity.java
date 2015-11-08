@@ -56,6 +56,8 @@ public class PostActivity extends ActionBarActivity {
         values.put(Posts.PostEntry.COLUMN_NAME_ITEM_NAME, itna);
         values.put(Posts.PostEntry.COLUMN_NAME_DESCRIPTION, itdes);
         values.put(Posts.PostEntry.COLUMN_NAME_PRICE, itpr);
+        values.put(Posts.PostEntry.COLUMN_NAME_CREATED_AT, createTime);
+        values.put(Posts.PostEntry.COLUMN_NAME_UPDATED_AT, updateTime);
 
         long newRowId;
         newRowId = db.insert(Posts.PostEntry.TABLE_NAME, null, values);
