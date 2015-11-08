@@ -12,4 +12,9 @@
     <string name="login_failed">Login failed!</string>
     <string name="ok">OK</string>
     <string name="title_activity_show">ShowActivity</string>
+
+    <string name="item_name">Item name</string>
+    <string name="item_description">Please describe your item...</string>
+    <string name="item_price">Please enter the price</string>
+    <string name="button_post">Add Your Item</string>
 </resources>
